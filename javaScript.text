@@ -1,0 +1,15 @@
+一、IE8及以下版本不兼容
+   1.getElementsByClassName();
+     ·可用getElementsByTagName()做封装函数代替：
+       function getByClassName(className,parentId){
+       var parent=parentId?document.getElementById("parentId") : document, 
+           eles=[],
+           elements=parent.getElementsByTagName("*");
+       for(var i=0;i<elements.length;i++){
+           if(elements[i].className==className){
+           eles.push(elements[i];
+           }
+       }
+       return eles;
+       }
+           
